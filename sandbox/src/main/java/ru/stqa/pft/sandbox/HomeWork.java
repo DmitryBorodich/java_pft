@@ -8,7 +8,7 @@ public class HomeWork
         Point p2 = new Point(7,10);
         System.out.println("Длинна между двумя двумерными точками с координатами (" + p1.a + "," + p1.b + ") и (" + p2.a + "," + p2.b + ") = " + distance1(p1,p2));
 
-        System.out.println("Длинна между двумя двумерными точками с координатами (" + p1.a + "," + p1.b + ") и (" + p2.a + "," + p2.b + ") = " + p1.distance(p1,p2));
+        System.out.println("Длинна между двумя двумерными точками с координатами (" + p1.a + "," + p1.b + ") и (" + p2.a + "," + p2.b + ") = " + p1.distance(p2));
     }
 
     public static double distance1(Point p1, Point p2)
