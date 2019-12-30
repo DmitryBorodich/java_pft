@@ -1,6 +1,7 @@
 package ru.stqa.ptf.addressbook.tests;
 
 
+import org.openqa.selenium.*;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -11,6 +12,7 @@ public class TestBase {
 
     protected final ApplicationManager app = new ApplicationManager();
     protected WebDriver wd;
+    protected boolean acceptNextAlert = true;
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() throws Exception {
@@ -20,6 +22,20 @@ public class TestBase {
     @AfterMethod(alwaysRun = true)
     public void tearDown() throws Exception {
         app.stop();
+    }
+    public String closeAlertAndGetItsText() {
+        try {
+            Alert alert = wd.switchTo().alert();
+            String alertText = alert.getText();
+            if (acceptNextAlert) {
+                alert.accept();
+            } else {
+                alert.dismiss();
+            }
+            return alertText;
+        } finally {
+            acceptNextAlert = true;
+        }
     }
 
 }

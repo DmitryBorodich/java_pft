@@ -32,4 +32,12 @@ public class ContactHelper extends HelperBase {
     public void gotoHomePage() {
         wd.get("http://localhost/addressbook/index.php");
     }
+
+    public void selectContact() {
+        click(By.id("1"));
+    }
+
+    public void deleteSelectedContact() {
+        click(By.xpath("//input[@value='Delete']"));
+    }
 }
