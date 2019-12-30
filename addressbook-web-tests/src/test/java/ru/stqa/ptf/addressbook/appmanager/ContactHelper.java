@@ -20,9 +20,6 @@ public class ContactHelper extends HelperBase {
         type (By.name("mobile"), contactData.getMobile());
         type (By.name("email"), contactData.getEmail());
         type (By.name("address2"), contactData.getAddress());
-
-        click(By.name("theform"));
-        click(By.xpath("(//input[@name='submit'])[2]"));
     }
 
     public void initContactCreation() {
@@ -39,5 +36,17 @@ public class ContactHelper extends HelperBase {
 
     public void deleteSelectedContact() {
         click(By.xpath("//input[@value='Delete']"));
+    }
+
+    public void editContact() {
+        click(By.xpath("//img[@alt='Edit']"));
+    }
+
+    public void submitContactUpdate() {
+        click(By.name("update"));
+    }
+
+    public void submitContactCreate() {
+        click(By.xpath("(//input[@name='submit'])[2]"));
     }
 }
