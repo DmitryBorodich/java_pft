@@ -49,4 +49,8 @@ public class ContactHelper extends HelperBase {
     public void submitContactCreate() {
         click(By.xpath("(//input[@name='submit'])[2]"));
     }
+
+    public void closeAlertDeletedContact() {
+        wd.switchTo().alert().accept();
+    }
 }

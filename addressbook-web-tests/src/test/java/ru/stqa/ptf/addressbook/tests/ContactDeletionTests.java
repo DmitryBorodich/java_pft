@@ -14,7 +14,7 @@ public class ContactDeletionTests extends TestBase {
         app.getContactHelper().selectContact();
         acceptNextAlert = true;
         app.getContactHelper().deleteSelectedContact();
-        assertTrue(closeAlertAndGetItsText().matches("^Delete 1 addresses[\\s\\S]$"));
+        app.getContactHelper().closeAlertDeletedContact();
     }
 
 
