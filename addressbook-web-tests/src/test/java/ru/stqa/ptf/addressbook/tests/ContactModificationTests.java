@@ -7,10 +7,12 @@ public class ContactModificationTests extends TestBase {
     @Test
     public void testContactModification() throws Exception {
         app.getContactHelper().gotoHomePage();
+        if (! app.getContactHelper().isThereAContact()){
+            app.getContactHelper().createContact(new ContactData("jon1", "smit1", "+79999999991", "2@2.2", "test"));
+        }
         app.getContactHelper().editContact();
         app.getContactHelper().fillContactForm(new ContactData("jon1", "smit1", "+79999999991", "2@2.2", "test"));
         app.getContactHelper().submitContactUpdate();
         app.getContactHelper().backtoHomePage();
     }
-
 }

@@ -1,7 +1,7 @@
 package ru.stqa.ptf.addressbook.tests;
 
 import org.testng.annotations.Test;
-import static org.testng.Assert.*;
+import ru.stqa.ptf.addressbook.model.ContactData;
 
 
 public class ContactDeletionTests extends TestBase {
@@ -11,6 +11,9 @@ public class ContactDeletionTests extends TestBase {
     @Test
     public void testContactDeletion() throws Exception {
         app.getContactHelper().gotoHomePage();
+        if (! app.getContactHelper().isThereAContact()){
+            app.getContactHelper().createContact(new ContactData("jon1", "smit1", "+79999999991", "2@2.2", "test"));
+        }
         app.getContactHelper().selectContact();
         acceptNextAlert = true;
         app.getContactHelper().deleteSelectedContact();
