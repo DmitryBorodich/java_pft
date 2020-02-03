@@ -42,8 +42,8 @@ public class ContactHelper extends HelperBase {
         click(By.xpath("//input[@value='Delete']"));
     }
 
-    public void editContact() {
-        click(By.xpath("//img[@alt='Edit']"));
+    public void editContact(int number) {
+        click(By.xpath("(//img[@alt='Edit'])[" + number  + "]"));
     }
 
     public void submitContactUpdate() {
@@ -73,13 +73,13 @@ public class ContactHelper extends HelperBase {
         List<ContactData> contacts = new ArrayList<ContactData>();
         List<WebElement> elements = wd.findElements(By.name("entry"));
         for (WebElement element : elements) {
-            String title = element.findElement(By.tagName("input")).getAttribute("title");;
-            char[] firstname = new char[4];
-            char[] lastname = new char[5];
-            title.getChars(8, 12, firstname, 0);
-            title.getChars(13, 18, lastname, 0);
+            List<WebElement> contactEntryList = element.findElements(By.cssSelector("td"));
+            WebElement firstname1 = contactEntryList.get(2);
+            String firstname = firstname1.getText();
+            WebElement lastname1 = contactEntryList.get(1);
+            String lastname = lastname1.getText();
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("id"));
-            ContactData contact = new ContactData(id, String.valueOf(firstname), String.valueOf(lastname),null, null, null);
+            ContactData contact = new ContactData(id, firstname, lastname,null, null, null);
             contacts.add(contact);
         }
         return contacts;
