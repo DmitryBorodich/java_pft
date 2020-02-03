@@ -66,7 +66,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public boolean isThereAContact() {
-        return isElenentPresent(By.id("6"));
+        return isElenentPresent(By.name("selected[]"));
     }
 
     public List<ContactData> getContactList() {
