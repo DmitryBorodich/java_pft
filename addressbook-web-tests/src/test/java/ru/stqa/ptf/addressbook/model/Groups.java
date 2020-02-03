@@ -7,7 +7,8 @@ import java.util.Set;
 
 public class Groups extends ForwardingSet<GroupData> {
 
-    private Set<GroupData> deligate:
+    private Set<GroupData> deligate;
+
 
     public Groups(Groups groups) {
         this.deligate = new HashSet<GroupData>(groups.deligate);
