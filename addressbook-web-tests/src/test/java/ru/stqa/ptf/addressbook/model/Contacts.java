@@ -20,7 +20,7 @@ public class Contacts extends ForwardingSet<ContactData> {
 
     @Override
     protected Set<ContactData> delegate() {
-        return null;
+        return deligate;
     }
 
     public Contacts withAdded(ContactData contact) {
