@@ -1,6 +1,5 @@
 <list>
   <contact>
-    <id>2147483647</id>
     <firstname>jon 0</firstname>
     <lastname>smith 0</lastname>
     <mobilePhone>+79999999992</mobilePhone>
@@ -10,7 +9,6 @@
     <workPhone>+79999999993</workPhone>
   </contact>
   <contact>
-    <id>2147483647</id>
     <firstname>jon 1</firstname>
     <lastname>smith 1</lastname>
     <mobilePhone>+79999999992</mobilePhone>
@@ -20,7 +18,6 @@
     <workPhone>+79999999993</workPhone>
   </contact>
   <contact>
-    <id>2147483647</id>
     <firstname>jon 2</firstname>
     <lastname>smith 2</lastname>
     <mobilePhone>+79999999992</mobilePhone>
