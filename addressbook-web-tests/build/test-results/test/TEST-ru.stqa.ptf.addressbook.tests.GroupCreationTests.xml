@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.ptf.addressbook.tests.GroupCreationTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-02-17T08:51:49" hostname="DESKTOP-SR5JB9I" time="7.696">
+  <properties/>
+  <testcase name="testGroupCreation[0](GroupData{id='0', name='test 0'})" classname="ru.stqa.ptf.addressbook.tests.GroupCreationTests" time="3.356"/>
+  <testcase name="testGroupCreation[1](GroupData{id='0', name='test 1'})" classname="ru.stqa.ptf.addressbook.tests.GroupCreationTests" time="2.07"/>
+  <testcase name="testGroupCreation[2](GroupData{id='0', name='test 2'})" classname="ru.stqa.ptf.addressbook.tests.GroupCreationTests" time="2.238"/>
+  <system-out><![CDATA[13:51:49.075 [Test worker] INFO  r.s.ptf.addressbook.tests.TestBase - Start test testGroupCreation with parameters [GroupData{id='0', name='test 0'}]
+13:51:52.435 [Test worker] INFO  r.s.ptf.addressbook.tests.TestBase - Stop test testGroupCreation
+13:51:52.435 [Test worker] INFO  r.s.ptf.addressbook.tests.TestBase - Start test testGroupCreation with parameters [GroupData{id='0', name='test 1'}]
+13:51:54.507 [Test worker] INFO  r.s.ptf.addressbook.tests.TestBase - Stop test testGroupCreation
+13:51:54.508 [Test worker] INFO  r.s.ptf.addressbook.tests.TestBase - Start test testGroupCreation with parameters [GroupData{id='0', name='test 2'}]
+13:51:56.773 [Test worker] INFO  r.s.ptf.addressbook.tests.TestBase - Stop test testGroupCreation
+]]></system-out>
+  <system-err><![CDATA[Security framework of XStream not initialized, XStream is probably vulnerable.
+]]></system-err>
+</testsuite>
