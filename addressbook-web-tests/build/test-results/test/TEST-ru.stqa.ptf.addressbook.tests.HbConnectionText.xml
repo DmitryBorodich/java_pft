@@ -1,73 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.ptf.addressbook.tests.HbConnectionText" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-17T11:43:41" hostname="DESKTOP-SR5JB9I" time="0.319">
+<testsuite name="ru.stqa.ptf.addressbook.tests.HbConnectionText" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-17T12:31:47" hostname="DESKTOP-SR5JB9I" time="0.322">
   <properties/>
-  <testcase name="testHbConnection" classname="ru.stqa.ptf.addressbook.tests.HbConnectionText" time="0.319"/>
-  <system-out><![CDATA[16:43:39,865 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-16:43:39,865 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-16:43:39,865 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/lerning/java_pft/addressbook-web-tests/build/resources/test/logback.xml]
-16:43:39,908 |-INFO in ch.qos.logback.core.joran.action.ImplicitModelAction - Assuming default class name [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for tag [encoder]
-16:43:39,908 |-INFO in ch.qos.logback.core.joran.action.ImplicitModelAction - Assuming default class name [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for tag [encoder]
-16:43:39,922 |-INFO in ch.qos.logback.core.model.processor.TimestampModelHandler@73b9c3d9 - Using current interpretation time, i.e. now, as time reference.
-16:43:39,923 |-INFO in ch.qos.logback.core.model.processor.TimestampModelHandler@73b9c3d9 - Adding property to the context with key="bySecond" and value="20200217T164339" to the LOCAL scope
-16:43:39,923 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler@33155f65 - Setting level of ROOT logger to DEBUG
-16:43:39,924 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler@8a25eaf - Processing appender named [FILE]
-16:43:39,924 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler@8a25eaf - About to instantiate appender of type [ch.qos.logback.core.FileAppender]
-16:43:39,945 |-INFO in ch.qos.logback.core.FileAppender[FILE] - File property is set to [test-20200217T164339.log]
-16:43:39,947 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler@8a25eaf - Attaching appender [FILE] to Logger[ROOT]
-16:43:39,947 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler@4422c808 - Processing appender named [STDOUT]
-16:43:39,947 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler@4422c808 - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-16:43:39,958 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler@4422c808 - Attaching appender [STDOUT] to Logger[ROOT]
-16:43:39,960 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@32ca79f - End of configuration.
-16:43:39,961 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@11187c0 - Registering current configuration as safe fallback point
-16:43:40.031 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate Core {6.0.0.Alpha4}
-16:43:40.328 [Test worker] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-16:43:40.473 [Test worker] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-16:43:40.478 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/addressbook?serverTimezone=UTC]
-16:43:40.478 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=root, password=}
-16:43:40.478 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
-16:43:40.481 [Test worker] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
-16:43:40.614 [Test worker] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-16:43:41.246 [Test worker] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3122a3a7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-16:43:41.522 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-Hibernate: select g1_0.group_id, g1_0.group_footer, g1_0.group_header, g1_0.group_name from group_list as g1_0
-GroupData{id='8', name='test1'}
-GroupData{id='9', name='test1'}
-GroupData{id='10', name='test1'}
-GroupData{id='11', name='test1'}
-GroupData{id='12', name='test1'}
-GroupData{id='13', name='test1'}
-GroupData{id='15', name='test1'}
-GroupData{id='17', name='test2'}
-GroupData{id='18', name='test2'}
-GroupData{id='19', name='test2'}
-GroupData{id='20', name='test1'}
-GroupData{id='21', name='test2'}
-GroupData{id='22', name='test3'}
-GroupData{id='23', name='test1'}
-GroupData{id='24', name='test3'}
-GroupData{id='25', name='test1'}
-GroupData{id='26', name='test2'}
-GroupData{id='27', name='test3'}
-GroupData{id='28', name='test 0'}
-GroupData{id='29', name='test 1'}
-GroupData{id='30', name='test 0'}
-GroupData{id='31', name='test 1'}
-GroupData{id='32', name='test 2'}
-GroupData{id='33', name='test 0'}
-GroupData{id='34', name='test 1'}
-GroupData{id='35', name='test 2'}
-GroupData{id='36', name='test 0'}
-GroupData{id='37', name='test 1'}
-GroupData{id='38', name='test 2'}
-GroupData{id='39', name='test 0'}
-GroupData{id='40', name='test 1'}
-GroupData{id='41', name='test 2'}
-GroupData{id='42', name='test 0'}
-GroupData{id='43', name='test 1'}
-GroupData{id='44', name='test 2'}
-GroupData{id='45', name='test 0'}
-GroupData{id='46', name='test 1'}
-GroupData{id='47', name='test 2'}
+  <testcase name="testHbConnection" classname="ru.stqa.ptf.addressbook.tests.HbConnectionText" time="0.322"/>
+  <system-out><![CDATA[17:31:46,040 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+17:31:46,040 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+17:31:46,041 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/lerning/java_pft/addressbook-web-tests/build/resources/test/logback.xml]
+17:31:46,079 |-INFO in ch.qos.logback.core.joran.action.ImplicitModelAction - Assuming default class name [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for tag [encoder]
+17:31:46,079 |-INFO in ch.qos.logback.core.joran.action.ImplicitModelAction - Assuming default class name [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for tag [encoder]
+17:31:46,093 |-INFO in ch.qos.logback.core.model.processor.TimestampModelHandler@73b9c3d9 - Using current interpretation time, i.e. now, as time reference.
+17:31:46,094 |-INFO in ch.qos.logback.core.model.processor.TimestampModelHandler@73b9c3d9 - Adding property to the context with key="bySecond" and value="20200217T173146" to the LOCAL scope
+17:31:46,095 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler@33155f65 - Setting level of ROOT logger to DEBUG
+17:31:46,095 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler@8a25eaf - Processing appender named [FILE]
+17:31:46,095 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler@8a25eaf - About to instantiate appender of type [ch.qos.logback.core.FileAppender]
+17:31:46,116 |-INFO in ch.qos.logback.core.FileAppender[FILE] - File property is set to [test-20200217T173146.log]
+17:31:46,117 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler@8a25eaf - Attaching appender [FILE] to Logger[ROOT]
+17:31:46,118 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler@4422c808 - Processing appender named [STDOUT]
+17:31:46,118 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler@4422c808 - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+17:31:46,134 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler@4422c808 - Attaching appender [STDOUT] to Logger[ROOT]
+17:31:46,136 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@32ca79f - End of configuration.
+17:31:46,137 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@11187c0 - Registering current configuration as safe fallback point
+17:31:46.213 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate Core {6.0.0.Alpha4}
+17:31:46.596 [Test worker] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+17:31:46.741 [Test worker] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+17:31:46.746 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/addressbook?serverTimezone=UTC]
+17:31:46.746 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=root, password=}
+17:31:46.747 [Test worker] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+17:31:46.750 [Test worker] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+17:31:46.935 [Test worker] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+17:31:47.572 [Test worker] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4a350f4f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+17:31:47.646 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Hibernate: select c1_0.id, c1_0.address, c1_0.email, c1_0.email2, c1_0.email3, c1_0.firstname, c1_0.home, c1_0.lastname, c1_0.mobile, c1_0.photo, c1_0.work from addressbook as c1_0
+ContactData{id=17, firstname='jon1', lastname='smit1'}
+ContactData{id=24, firstname='jon1', lastname='smit1'}
+ContactData{id=25, firstname='jon1', lastname='smit1'}
+ContactData{id=26, firstname='jon 0', lastname='smith 0'}
+ContactData{id=27, firstname='jon 1', lastname='smith 1'}
+ContactData{id=28, firstname='jon 2', lastname='smith 2'}
+ContactData{id=29, firstname='jon 0', lastname='smith 0'}
+ContactData{id=30, firstname='jon 1', lastname='smith 1'}
+ContactData{id=31, firstname='jon 2', lastname='smith 2'}
+ContactData{id=32, firstname='jon 0', lastname='smith 0'}
+ContactData{id=33, firstname='jon 1', lastname='smith 1'}
+ContactData{id=34, firstname='jon 2', lastname='smith 2'}
+ContactData{id=35, firstname='jon 0', lastname='smith 0'}
+ContactData{id=36, firstname='jon 1', lastname='smith 1'}
+ContactData{id=37, firstname='jon 2', lastname='smith 2'}
 ]]></system-out>
   <system-err><![CDATA[Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
 ]]></system-err>
