@@ -56,6 +56,28 @@ public class ContactData {
     @Transient
     private String allEmails;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ContactData that = (ContactData) o;
+        return id == that.id &&
+                Objects.equals(firstname, that.firstname) &&
+                Objects.equals(lastname, that.lastname) &&
+                Objects.equals(mobilePhone, that.mobilePhone) &&
+                Objects.equals(email, that.email) &&
+                Objects.equals(email2, that.email2) &&
+                Objects.equals(email3, that.email3) &&
+                Objects.equals(address, that.address) &&
+                Objects.equals(homePhone, that.homePhone) &&
+                Objects.equals(workPhone, that.workPhone);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstname, lastname, mobilePhone, email, email2, email3, address, homePhone, workPhone);
+    }
+
     @Column(name = "photo")
     @Type(type = "text")
     private String photo;
@@ -126,21 +148,6 @@ public class ContactData {
         return this;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ContactData that = (ContactData) o;
-        return id == that.id &&
-                Objects.equals(firstname, that.firstname) &&
-                Objects.equals(lastname, that.lastname);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, firstname, lastname);
-    }
-
     public int getId() {return id;}
 
 
@@ -188,5 +195,9 @@ public class ContactData {
 
     public String getAllEmails() { return allEmails; }
 
-    public File getPhoto() { return new File(photo); }
+    public File getPhoto() { if (photo == null) {
+        return null;
+    } else {
+        return new File(photo);
+    } }
 }
