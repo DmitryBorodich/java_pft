@@ -46,10 +46,6 @@ public class HbConnectionText {
         }
         session.getTransaction().commit();
         session.close();
-
-
-
-
     }
 
 
