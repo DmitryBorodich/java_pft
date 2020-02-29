@@ -31,7 +31,6 @@ public class ContactModificationTests extends TestBase {
         app.сontact().gotoHomePage();
         app.сontact().modify(contact);
         Contacts after = app.db().contacts();
-
         assertEquals(after.size(), before.size());
         Contacts beforeChance = before.without(modifitedContact).withAdded(contact);
         assertThat(after, equalTo(beforeChance));

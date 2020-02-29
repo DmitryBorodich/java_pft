@@ -15,8 +15,6 @@ public class HbConnectionText {
     private SessionFactory sessionFactory;
 
     @BeforeClass
-
-
     protected void setUp() throws Exception {
         // A SessionFactory is set up once for an application!
         final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
@@ -36,17 +34,16 @@ public class HbConnectionText {
 
     @Test
     public void testHbConnection() {
-
-
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        List<ContactData> result = session.createQuery( "from ContactData where deprecated = '0000-00-00'").list();
-        for (ContactData contact : result) {
-            System.out.println(contact);
-        }
+        List<ContactData> result = session.createQuery( "from ContactData").list();
+
         session.getTransaction().commit();
         session.close();
+
+        for (ContactData contact : result) {
+            System.out.println(contact);
+            System.out.println(contact.getGroups());
+        }
     }
-
-
 }
