@@ -3,8 +3,11 @@ package ru.stqa.ptf.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import ru.stqa.ptf.addressbook.model.ContactData;
 import ru.stqa.ptf.addressbook.model.Contacts;
+import ru.stqa.ptf.addressbook.model.GroupData;
+import ru.stqa.ptf.addressbook.model.Groups;
 
 import java.util.List;
 
@@ -135,5 +138,16 @@ public class ContactHelper extends HelperBase {
         selectContact(addedContact.getId());
         click(By.name("add"));
         gotoHomePage();
+    }
+
+    public void deleteToGroup(ContactData deletedContact) {
+        click(By.name("group"));
+        Groups deletedGroups = deletedContact.getGroups();
+        GroupData deletedGroup = deletedGroups.iterator().next();
+        new Select(wd.findElement(By.name("group"))).selectByVisibleText(deletedGroup.getName());
+        click(By.name("group"));
+        selectContact(deletedContact.getId());
+        click(By.name("remove"));
+
     }
 }
