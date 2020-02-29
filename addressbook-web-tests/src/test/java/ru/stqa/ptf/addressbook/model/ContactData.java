@@ -32,11 +32,11 @@ public class ContactData {
 
     @Column(name = "email2")
     @Type(type = "text")
-    private String email2;
+    private String email2 = "";
 
     @Column(name = "email3")
     @Type(type = "text")
-    private String email3;
+    private String email3 = "";
 
     @Column(name = "address")
     @Type(type = "text")

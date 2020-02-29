@@ -39,13 +39,13 @@ public class ContactCreationTests extends TestBase  {
   @Test(dataProvider = "validContacts")
   public void testContactCreation(ContactData contact) {
     app.сontact().gotoHomePage();
-    Contacts before = app.сontact().all();
+    Contacts before =app.db().contacts();
     app.сontact().create(contact);
-    Contacts after = app.сontact().all();
+    Contacts after = app.db().contacts();
 
     assertEquals(after.size(), before.size() + 1);
-    assertThat(after, equalTo(
-            before.withAdded(contact.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
+    Contacts beforeCreate = before.withAdded(contact.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()));
+    assertThat(after, equalTo(beforeCreate));
   }
 
 

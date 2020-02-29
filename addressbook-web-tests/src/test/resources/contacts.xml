@@ -3,26 +3,10 @@
     <firstname>jon 0</firstname>
     <lastname>smith 0</lastname>
     <mobilePhone>+79999999992</mobilePhone>
-    <email>0@gmail.com</email>
+    <email>00@gmail.com</email>
+    <email2>01@gmail.com</email2>
+    <email3>02@gmail.com</email3>
     <address>address 0</address>
-    <homePhone>+79999999991</homePhone>
-    <workPhone>+79999999993</workPhone>
-  </contact>
-  <contact>
-    <firstname>jon 1</firstname>
-    <lastname>smith 1</lastname>
-    <mobilePhone>+79999999992</mobilePhone>
-    <email>1@gmail.com</email>
-    <address>address 1</address>
-    <homePhone>+79999999991</homePhone>
-    <workPhone>+79999999993</workPhone>
-  </contact>
-  <contact>
-    <firstname>jon 2</firstname>
-    <lastname>smith 2</lastname>
-    <mobilePhone>+79999999992</mobilePhone>
-    <email>2@gmail.com</email>
-    <address>address 2</address>
     <homePhone>+79999999991</homePhone>
     <workPhone>+79999999993</workPhone>
   </contact>
