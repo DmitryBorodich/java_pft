@@ -11,6 +11,7 @@ dependencies {
     implementation 'org.seleniumhq.selenium:selenium-java:4.0.0-alpha-3'
     implementation 'org.hamcrest:java-hamcrest:2.0.0.0'
     implementation 'com.github.jia-zhen:cloudHttpClient:1.1.4'
+    implementation 'commons-net:commons-net:3.6'
 }
 
 test {
