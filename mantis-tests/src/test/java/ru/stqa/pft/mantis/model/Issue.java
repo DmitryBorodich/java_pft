@@ -7,6 +7,16 @@ public class Issue {
     private String description;
     private Project project;
     private String status;
+    private String state_name;
+
+    public String getState_name() {
+        return state_name;
+    }
+
+    public Issue withState_name(String state_name) {
+        this.state_name = state_name;
+        return this;
+    }
 
     public String getStatus() {
         return status;
