@@ -59,6 +59,9 @@ public class ContactData {
     @Transient
     private String allEmails;
 
+    @Transient
+    private String inGroup;
+
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "address_in_groups",
             joinColumns = @JoinColumn(name = "id"), inverseJoinColumns = @JoinColumn(name = "group_id"))
@@ -96,6 +99,20 @@ public class ContactData {
 
     public ContactData withPhoto(File photo) {
         this.photo = photo.getPath();
+        return this;
+    }
+
+    public String getInGroup() {
+        return inGroup;
+    }
+
+    public ContactData withInGroup(GroupData group) {
+        groups.add(group);
+        return this;
+    }
+
+    public ContactData withInGroup(String inGroup) {
+        this.inGroup = inGroup;
         return this;
     }
 

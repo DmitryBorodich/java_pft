@@ -3,11 +3,9 @@ package ru.stqa.ptf.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import ru.stqa.ptf.addressbook.model.ContactData;
 import ru.stqa.ptf.addressbook.model.Contacts;
 import ru.stqa.ptf.addressbook.model.GroupData;
-import ru.stqa.ptf.addressbook.model.Groups;
 
 import java.util.List;
 
@@ -65,6 +63,8 @@ public class ContactHelper extends HelperBase {
     public void closeAlertDeletedContact() {
         wd.switchTo().alert().accept();
     }
+
+    public void selectContactById(int id) { wd.findElement(By.cssSelector("input[value='" + id + "']")).click(); }
 
     public void create(ContactData contact) {
         initContactCreation();
@@ -134,20 +134,33 @@ public class ContactHelper extends HelperBase {
         cells.get(7).findElement(By.tagName("a")).click();
     }
 
-    public void addToGroup(ContactData addedContact) {
+    public void addToGroup(ContactData addedContact, GroupData group) {
         selectContact(addedContact.getId());
+        click(By.name("to_group"));
+        click(By.cssSelector("select[name=\"to_group\"] > option[value=\""+group.getId()+"\"]"));
         click(By.name("add"));
         gotoHomePage();
     }
 
-    public void deleteToGroup(ContactData deletedContact) {
+    public void deleteToGroup(ContactData deletedContact, int id) {
         click(By.name("group"));
-        Groups deletedGroups = deletedContact.getGroups();
-        GroupData deletedGroup = deletedGroups.iterator().next();
-        new Select(wd.findElement(By.name("group"))).selectByVisibleText(deletedGroup.getName());
-        click(By.name("group"));
-        selectContact(deletedContact.getId());
+        click(By.cssSelector("select[name=\"group\"] > option[value=\""+ id +"\"]"));
+        selectContactById(deletedContact.getId());
         click(By.name("remove"));
 
+    }
+
+    public int getNextId(Contacts contacts) {
+        int max = 0;
+        for (ContactData contact : contacts) {
+            if (contact.getId() > max) {
+                max= contact.getId();
+            }
+        }
+        return max+1;
+    }
+
+    public void getCurrentGroupPage(GroupData group) {
+        click(By.linkText("group page \""+group.getName()+"\""));
     }
 }
