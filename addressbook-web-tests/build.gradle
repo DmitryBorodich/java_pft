@@ -20,6 +20,7 @@ dependencies {
 test {
     useTestNG()
 }
+
 task testGroups (type: Test) {
     useTestNG {
         suites 'src/test/resources/testing-groups.xml'
