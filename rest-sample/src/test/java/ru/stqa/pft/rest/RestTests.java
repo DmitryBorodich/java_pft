@@ -46,4 +46,5 @@ public class RestTests {
         JsonElement parsed = JsonParser.parseString(json);
         return parsed.getAsJsonObject().get("issue_id").getAsInt();
     }
+
 }
