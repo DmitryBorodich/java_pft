@@ -1,6 +1,6 @@
 package ru.stqa.pft.sandbox;
 
-public class HelloWorld
+public class helloWorld
 {
     public static void main(String[] args)
     {
@@ -25,4 +25,6 @@ public class HelloWorld
     {
         return r.a * r.b;
     }
+
+
 }
