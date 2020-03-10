@@ -9,7 +9,6 @@ import ru.stqa.ptf.addressbook.model.Groups;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.testng.Assert.assertEquals;
 
 public class ContactAddToGroup extends TestBase {
     @BeforeMethod
@@ -35,9 +34,8 @@ public class ContactAddToGroup extends TestBase {
         GroupData group = groups.iterator().next();
         app.сontact().gotoHomePage();
         app.сontact().addToGroup(addedContact, group);
-        Contacts after = app.db().contacts();
-        assertEquals(after.size(), before.size());
-        assertThat(after, equalTo(before));
+        Groups afterAdditionContact = app.db().getContactFromDb(addedContact.getId()).getGroups();
+        assertThat(afterAdditionContact, equalTo(addedContact.getGroups().withAdded(group)));
     }
 
     private ContactData newContact(Contacts before) {
