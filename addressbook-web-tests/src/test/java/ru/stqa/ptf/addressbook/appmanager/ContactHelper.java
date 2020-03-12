@@ -135,7 +135,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void addToGroup(ContactData addedContact, GroupData group) {
-        selectContact(addedContact.getId());
+        selectContactById(addedContact.getId());
         click(By.name("to_group"));
         click(By.cssSelector("select[name=\"to_group\"] > option[value=\""+group.getId()+"\"]"));
         click(By.name("add"));

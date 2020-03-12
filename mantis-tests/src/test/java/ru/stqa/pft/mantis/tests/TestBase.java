@@ -65,7 +65,7 @@ public class TestBase {
     public static boolean isIssueOpen2(int issueId2) throws IOException, ServiceException {
 
         boolean isFixed = false;
-        String json = getExecutor().execute(Request.Get("https://bugify.stqa.ru/api/issues.json?limit=500")).returnContent().asString();
+        String json = getExecutor().execute(Request.Get("https://bugify.stqa.ru/api/issues/" + issueId2 + ".json?limit=500")).returnContent().asString();
         JsonElement parsed = JsonParser.parseString(json);
         JsonElement issues =  parsed.getAsJsonObject().get("issues");
         Set<Issue> issue = new Gson().fromJson(issues, new TypeToken<Set<Issue>>() {}.getType());
